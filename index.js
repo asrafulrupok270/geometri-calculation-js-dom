@@ -13,6 +13,7 @@ document.getElementById("triangle-btn").addEventListener("click",function(){
   triangleArea.innerText = area 
   const triangleAreaa = areaText("triangle-area").innerText 
   table(count,triangleName,triangleAreaa)
+  setBg()
  
 
 
@@ -30,6 +31,7 @@ document.getElementById("rectengel-btn").addEventListener("click",function(){
   const rectangleName = areaText("rectangle-name").innerText
   
   table(count,rectangleName,rectangleArea.innerText)
+  setBg()
 
   
 
@@ -46,6 +48,7 @@ document.getElementById("parallelogram-btn").addEventListener("click",function()
   const parallelogramArea = areaText("parallelogram-area") 
   parallelogramArea.innerText = area
   table(count,parallelogramName,parallelogramArea.innerText)
+  setBg()
 
   
 
@@ -62,6 +65,7 @@ document.getElementById("rhombus-btn").addEventListener("click",function(){
   const rhombusArea = areaText("rhombus-area") 
   rhombusArea.innerText = area
   table(count,rhombusName,rhombusArea.innerText)
+  setBg()
 
   
 
@@ -81,6 +85,7 @@ document.getElementById("pentagon-btn").addEventListener("click",function(){
   pentaArea.innerText = area
 
   table(count,pentaName,pentaArea.innerText)
+  setBg()
 
   
 
@@ -100,8 +105,15 @@ document.getElementById("ellipse-btn").addEventListener("click",function(){
   ellipseArea.innerText = area
 
   table(count,ellipseName,ellipseArea.innerText)
-
   
+ 
+  setBg()
 
 
 })
+const setBg = () => {
+     
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
+  }
